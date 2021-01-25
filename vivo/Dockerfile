@@ -24,7 +24,7 @@ RUN mvn clean install
 
 WORKDIR /usr/local/VIVO/
 COPY ./example-settings.xml example-settings.xml
-RUN mvn clean install -s example-settings.xml
+RUN mvn clean install -s example-settings.xml -DskipTests
 
 # clean up
 RUN rm -r /usr/local/tomcat/webapps/docs
